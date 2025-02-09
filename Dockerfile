@@ -13,11 +13,8 @@ RUN pip install awscli
 # Set working directory
 WORKDIR /app
 
-# Copy runner scripts
+# Copy runner script into the container
 COPY runner.py .
 
-# Install Python dependencies
-RUN pip install -r requirements.txt
-
-# Default command
+# Default command to execute the Python script
 CMD ["python", "runner.py"]
