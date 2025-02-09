@@ -16,6 +16,7 @@ WORKDIR /app
 # Copy runner scripts
 
 COPY requirements.txt .
+COPY runner.py .
 
 # Install Python dependencies
 RUN pip install -r requirements.txt
