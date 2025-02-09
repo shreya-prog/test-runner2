@@ -14,8 +14,6 @@ RUN pip install awscli
 WORKDIR /app
 
 # Copy runner scripts
-
-COPY requirements.txt .
 COPY runner.py .
 
 # Install Python dependencies
