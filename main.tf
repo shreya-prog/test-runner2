@@ -1,3 +1,15 @@
+# Declare variables
+variable "aws_region" {
+  description = "AWS region for deployment"
+  type        = string
+}
+
+variable "function_name" {
+  description = "Name of the Lambda function"
+  type        = string
+}
+
+
 provider "aws" {
   region = var.aws_region
 }
@@ -26,3 +38,5 @@ resource "aws_iam_role" "lambda_role" {
     ]
   })
 }
+
+

@@ -1,4 +1,6 @@
 import subprocess
+import os
+
 
 def generate_tfvars():
     # Example logic to generate Terraform variables
@@ -9,6 +11,13 @@ def generate_tfvars():
 
 
 def run_terraform():
+    """Runs Terraform commands and prints AWS credentials for debugging."""
+    
+    # Debugging: Print AWS credentials to ensure they are set
+    print("AWS Access Key:", os.getenv("AWS_ACCESS_KEY_ID"))
+    print("AWS Secret Key:", os.getenv("AWS_SECRET_ACCESS_KEY"))
+
+
     # Run Terraform commands
     subprocess.run(["terraform", "init"], check=True)
     subprocess.run(["terraform", "apply", "-auto-approve"], check=True)

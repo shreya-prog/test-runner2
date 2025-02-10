@@ -15,6 +15,7 @@ WORKDIR /app
 
 # Copy runner script into the container
 COPY runner.py .
+COPY main.tf .
 
 # Default command to execute the Python script
 CMD ["python", "runner.py"]
